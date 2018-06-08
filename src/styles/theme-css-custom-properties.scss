@@ -1,0 +1,37 @@
+// document.documentElement.classList.add('color-theme-in-transition')
+// document.documentElement.setAttribute('data-theme', theme)
+// window.setTimeout(function() {
+//   document.documentElement.classList.remove('color-theme-in-transition')
+// }, 1000)
+// Applied all the time, and every incidental hover color change or
+// transition would become a slo-mo nightmare, belonging more in a
+// Zack Snyder movie than in a productivity tool for programmers.
+// But if we were to add this class tactically a moment
+// before changing the theme, and remove as soon as the transition was over,
+// it would give us in a beautiful crossfade:
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+html {
+  --hue: 210; /* Blue */
+  --text-color-normal: hsl(var(--hue), 77%, 17%);
+}
+html[data-theme='dark'] {
+  --text-color-normal: hsl(var(--hue), 10%, 62%);
+}
+// Theme images
+img {
+  mix-blend-mode: multiply;
+}
+html[data-theme='dark'] img {
+  filter: invert(100%) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+// Invocation in JavaScript
+// document.documentElement.setAttribute('data-theme', 'dark')
+// document.documentElement.setAttribute('data-theme', 'light')

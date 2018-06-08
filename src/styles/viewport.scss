@@ -1,0 +1,16 @@
+$small: 550px;
+$medium: 960px;
+
+// Breakpoints
+@mixin bp($viewport) {
+  @if $viewport == 'small' {
+    @media(max-width:$small) {
+      @content;
+    }
+  }
+  @else if $viewport == 'medium' {
+    @media(min-width: $small+1) and (max-width: $medium) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+// inline
+.center-children {
+  text-align: center;
+}
+
+// block
+.center-me {
+  margin: 0 auto;
+}
+
+// vertical (old school display table, vertical-align: middle)
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// vertical w/ flexbox
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// vertical & horizontal
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// vertical & horizontal flexbox
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Grid with one element
+body, html {
+  height: 100%;
+  display: grid;
+}
+span { /* thing to center */
+  margin: auto;
+}

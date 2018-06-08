@@ -1,0 +1,17 @@
+.progress-container {
+  background-color: blue;
+  height: 5px;
+  width: 250px;
+  &.animate {
+    .progress-slider {
+      transition: all 5s linear;
+      width: 100%;
+    }
+  }
+  .progress-slider {
+    background-color: lime;
+    height: 5px;
+    width: 0;
+    transition: all 5s linear;
+  }
+}
