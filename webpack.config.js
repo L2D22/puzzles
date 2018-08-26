@@ -55,6 +55,18 @@ module.exports = {
     devServer: {
         disableHostCheck: true,
         host: '0.0.0.0',
-        port: 2000
+        port: 2000,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+        open: true,
+        proxy: {
+          '/imgur': {
+            'target': 'https://api.imgur.com',
+            'pathRewrite': { '^/imgur': '' },
+            'changeOrigin': true,
+            'secure': false
+          }
+        }
     }
 };

@@ -11,6 +11,11 @@
 // import './js/throttle.js';
 // import './js/reduce-map-filter.js';
 // import './js/task-runner.js';
+
+//import "./js/task-runner-priority.js";
+import "./js/snek.js";
+import "./styles/snek.scss";
+
 // import './js/for-of-loops.js';
 // import './js/debouce.js';
 // import './js/sort-odd-array.js';
@@ -21,12 +26,14 @@
 // import './js/get-all-dom-text.js';
 // import './js/scrolling.js';
 // import './js/scale-balance.js';
+//import './js/losing-scope.js';
 
 // import './js/new-graph.js';
 
 // Light Box Gallery
-import './styles/app.scss';
-import './js/light-box-lib/light-box-init.js'
+// TODO ugh CORBS with image test? wtf
+// import './styles/app.scss';
+// import './js/light-box-lib/light-box-init.js'
 
 // Slider Animation
 // import './styles/animate-slide-up.scss';

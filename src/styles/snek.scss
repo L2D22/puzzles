@@ -1,0 +1,13 @@
+#game {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  max-width: 300px;
+  margin: 0 auto;
+
+  div {
+    border: 1px dotted black;
+    padding: 20px;
+    text-align: center;
+  }
+}

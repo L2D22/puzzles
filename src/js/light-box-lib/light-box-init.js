@@ -10,14 +10,14 @@ import '../../styles/app.scss';
 let imgurParams = {
   method: 'GET',
   headers: {
-    Authorization: 'Client-ID 68dcfe957bf6ca1',
+    'Authorization': 'Client-ID 68dcfe957bf6ca1',
   }
 }
 
 /**
  * Get Data
  */
-fetch('https://api.imgur.com/3/gallery/r/cats/', imgurParams)
+fetch('imgur/3/gallery/r/cats/', imgurParams)
 .then(response => response.json())
 .then(data => render(data)).catch(function(err) {
     console.log('Fetch Error :-S', err);
@@ -27,6 +27,7 @@ fetch('https://api.imgur.com/3/gallery/r/cats/', imgurParams)
  * Render Images
  */
 function render(data) {
+  console.log('data', data);
     let { data: images } = data;
     const gallery = document.querySelector('.gallery');
     let htmlContent = '';
