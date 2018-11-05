@@ -1,5 +1,33 @@
 class TaskRunner {
     constructor(concurrency) {
+        this.concurrency = concurrency;
+    }
+
+    push(task) {
+      console.log('task', task);
+    }
+}
+
+function exampleSimpleTaskCreate(id) {
+    return (done) => {
+        console.log('start task ', id );
+        setTimeout(() => {
+            console.log('end task ', id );
+            done();
+        }, 1000);
+    };
+}
+
+const r = new TaskRunner(3);
+r.push(exampleSimpleTaskCreate(1)); // executes immediately
+r.push(exampleSimpleTaskCreate(2)); // executes immediately
+r.push(exampleSimpleTaskCreate(3)); // executes immediately
+r.push(exampleSimpleTaskCreate(4)); // should wait until one of the running tasks completes
+r.push(exampleSimpleTaskCreate(5)); // should wait until one of the running tasks completes
+
+
+class TaskRunner {
+    constructor(concurrency) {
         // TODO
         this.concurrency = concurrency;
         this.queue = [];
@@ -29,8 +57,6 @@ class TaskRunner {
         }
     }
 }
-
-function exampleTask(done) { /* calls done() at some point */ }
 
 function exampleSimpleTaskCreate(id) {
     return (done) => {

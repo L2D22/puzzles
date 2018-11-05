@@ -1,11 +1,17 @@
-// Take an array of arrays and flatten
-// into one array of only numbers
+// Q: Take an array of arrays and flatten into one array of only numbers
+const array = [[3], [1], 2, [3, [7, [6]]]];
+
+function flatten(arr) {
+
+}
+console.log('result', flatten(array)); // [3, 1, 2, 3, 7, 6];
+
+
+// A:
 function flatten(arr) {
     let flatten = [];
 
     reduceArrays(arr);
-    // worst case O(n^2) aka n*n or more??? ASK PHD
-    // it's funny they ask FE these questions
     // this type of data manipulation especially for large data sets
     // crashes the browser
     function reduceArrays(arr) {
@@ -23,16 +29,5 @@ function flatten(arr) {
 }
 
 const array = [[3], [1], 2, [3, [7, [6]]]];
-
-flatten(array); // [3, 1, 2, 3, 7, 6];
-console.log('flatten(array)', flatten(array));
-
-// Take an array of arrays and flatten into one array of only numbers
-
-const array = [[3], [1], 2, [3, [7, [6]]]];
-
-function flatten(arr) {
-
-}
 
 flatten(array); // [3, 1, 2, 3, 7, 6];

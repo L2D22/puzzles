@@ -1,4 +1,8 @@
-// import { findMissingNums } from './js/missing-numbers.js';
+// Questions
+// import { findMissingNums } from './js/questions/missing-numbers.js';
+import { twoSum } from './js/questions/two-sum.js';
+
+
 // import { manipulateArr } from './js/manipulate-arrays.js';
 // import { manipulateStr } from './js/manipulate-strings.js';
 // import './js/kevin-bacon.js';
@@ -13,8 +17,8 @@
 // import './js/task-runner.js';
 
 //import "./js/task-runner-priority.js";
-import "./js/snek.js";
-import "./styles/snek.scss";
+// import "./js/snek.js";
+// import "./styles/snek.scss";
 
 // import './js/for-of-loops.js';
 // import './js/debouce.js';

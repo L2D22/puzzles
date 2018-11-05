@@ -11,3 +11,6 @@
 - Observer answers in browser console
 - Add your own modules and coding problems!
 - PROFIT
+
+# Cool Links
+- Study guide https://github.com/leonardomso/33-js-concepts
